@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+
+	<script src="javascript/jquery-3.4.1.slim.min.js"></script>
+	<script type="text/javascript" src="javascript/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  body {
+    background-image: url("images/space blazer.jpg");
+    background-size: cover;
+  }
+</style>
+
+
+<body>
+	<div id="menu">
+		<li><a onclick="homePage()">Welcome</a></li>
+		<li><a onclick="register()">Register</a></li>
+		<li><a onclick="login()">Login</a></li>
+		<li><a type="button" data-toggle="modal" data-target="#aboutDiv">ABOUT</a></li>
+	</div>
+	<br>
+	<div id="content" class="content">
+		<div id="homePage">
+			<button id="loginButton" onclick="login()" style="width: 150px; height: 100px;">Login</button>
+			<button id="registerButton" onclick="register()" style="width: 150px; height: 100px;">Register</button>
+		</div>
+
+		<div id="registerPage">
+			<form class="cmxform" id="signUpForm" method="get" action="">
+				<fieldset>
+					<legend><b>Registration:</b></legend>
+					<div class="center ">
+						<div class="row align-middle">
+							<label for="fname" class="text alien-center"  style="padding :5px" >FirstName</label>
+							<input id="fname" name="firstname" type="text" class="text-center" style="margin-right: 100px">
+						</div>
+						<div class="row align-middle" >
+							<label for="lastname" class="text alien-center"  style="padding :5px">Lastname</label>
+							<input id="lastname" name="lastname" type="text" style="margin-right: 100px" class="text-center">
+						</div>
+						<div class="row align-middle">
+							<label for="username" class="text alien-center"  style="padding :5px">Username</label>
+							<input id="username" name="username" type="text" style="margin-right: 100px" class="text-center">
+						</div>
+						<div class="row align-middle">
+							<label for="password"class="text alien-center"  style="padding :5px">Password</label>
+							<input id="password" name="password" type="password"style="margin-right: 100px" class="text-center">
+						</div>
+						<div class="row align-middle">
+							<label for="confirm_password" class="text alien-center"  style="padding :5px">Confirm password</label>
+							<input id="confirm_password" name="confirm_password" type="password" style="margin-right: 160px" class="text-center">
+						</div>
+						<div class="row align-middle">
+							<label for="email" class="text alien-center"  style="padding :5px">Email</label>
+							<input id="email" name="email" type="email"style="margin-right: 70px" class="text-center">
+						</div>
+						<div class="row align-middle">
+							<label for="birth" class="text alien-center"  style="padding :5px">Day Of Birth</label>
+							<input type="date" name="birth" id="birth" placeholder="Enter your date of birth"
+								style="margin-right: 110px">
+						</div>
+					</div>
+					<br>
+					<p>
+						<button class="submit" type="submit" value="Submit">Submit</button>
+					</p>
+				</fieldset>
+			</form>
+		</div>
+
+		<div id="loginPage">
+			<div id="card" class="card card-container login">
+				<legend><b>Login:</b></legend>
+				<p>
+					<input type="text" id="checkUserName" class="form text-center" placeholder="Username" required autofocus >
+				</p>
+				<p>
+					<input type="password" id="checkUserPassword" class="form text-center" placeholder="Password" required >
+				</p>
+			</div>
+			<button onclick="loginButton()" type="submit">Login</button>
+		</div>
+	</div>
+
+	<div id="aboutDiv" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" id="closeModel" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">About</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						<div style="text-align: center;">
+                    <p>This game has been programed by ameena and morjan.</p>
+                    <p>the difficulties we faced while working on this project were: </p>
+                    <p> * working simultaneously on one common html/css/js file</p>						
+					</p>
+				</div>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="Game">
+	<title>Space Blazer Game</title>
+	
+	<style>
+		canvas {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>Space Blazer Game</h1>
+	<canvas id="myCanvas" width="800" height="500"></canvas>
+	<script src="app.js"></script>
+	
+		<label for="lblScore">SCORE:</label>
+		<input id="lblScore" type="text" size="5" class="without1" />
+		<label for="lblTime">TIME:</label>
+		<input id="lblTime" type="text" size="5" class="without1" />
+		<label for="lblLives">LIVES:</label>
+		<label id="lblLives"> </label>
+</body>
+</html>
+
+</div>
+	<footer>
+		<span class="foot"><h3><b>Contact us:</b></h3>
+			<b>amena:</b>
+			<a href="mailto:ameena@post.bgu.ac.il"><i class="fa fa-envelope"></i></a>
+			<a href="" class="fa fa-facebook"></a>
+			<a href="" class="fa fa-instagram"></a>
+			<b>morjan:</b>
+			<a href="mailto:morjan@post.bgu.ac.il"><i class="fa fa-envelope"></i></a>
+			<a href="" class="fa fa-facebook"></a>
+			<a href="" class="fa fa-instagram"></a>
+		</span>
+	</footer>
+
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script src="javascript/functions.js"></script>
+	<script src="javascript/gameSettings.js"></script>
+</body>
+
+</html>
